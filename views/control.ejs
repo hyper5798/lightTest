@@ -1,0 +1,108 @@
+<%- include page/header %>
+    <div class="col-md-12 column">
+		<div id="rpmAlert" name="rpmAlert" class="alert alert-danger alert-dismissable fade in">
+			<!--<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>-->
+			<strong>Warring!</strong> Motor speed exceeds the maximum, to the maximum.
+		</div>
+    </div>
+	<div class="col-md-12 column">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h4>
+				<span class="glyphicon glyphicon-dashboard"></span>
+				Dashboard
+				</h4>
+			</div>
+			<div class="panel-body">
+				<div class="col-md-3">
+					<center><div id="chart_div" ></div></center>
+					<!--<center><div id ="current_temperature"><%= temperature%></div></center>-->
+				</div>
+				<div class="col-md-3">
+					<center><div id="chart_div2" ></div></center>
+					<!--<center><div id ="current_humidity"><%= humidity%></div></center>-->
+				</div>
+
+				<!--<div class="col-md-6">
+
+					<center><div id="payloadMeterDiv"></div></center>
+
+				</div>-->
+				<div class="col-md-6" >
+					<center><h3>
+						<font color="white">最大值設定</font>
+					</h3></center>
+					<hr>
+					<div class="col-md-6">
+						<div class="col-md-6">
+							<font color="white">溫度最大值</font>
+
+
+						</div>
+						<div class="col-md-6">
+							<input id="temp_max" name="temp_max" value="<%= temp_max%>"
+								type="text" size="2" maxlength="2" required/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<button type="button" class="btn btn-primary" onClick="setMaxTemp()">儲存</button>
+					</div>
+					<br>
+					<br>
+					<div class="col-md-6">
+						<div class="col-md-6">
+							<font color="white">濕度最大值</font>
+
+
+						</div>
+						<div class="col-md-6">
+							<input id="hum_max" name="hum_max" value="<%= hum_max%>"
+								type="text" size="2" maxlength="2" required/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<button type="button" class="btn btn-primary" onClick="setMaxHum()">儲存</button>
+					</div>
+					<br>
+					<hr>
+					<div class="col-md-6">
+						<div class="col-md-4">
+							<font color="white">開關一</font>
+						</div>
+						<div class="col-md-8">
+							<input type="checkbox" id="my-checkbox" name="my-checkbox" onchange="onChangeHandler1(this)">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="col-md-4">
+							<font color="white">開關二</font>
+						</div>
+						<div class="col-md-8">
+							<input type="checkbox" id="my-checkbox2" name="my-checkbox2" onchange="onChangeHandler2(this)">
+						</div>
+					</div>
+					<hr>
+					<div class="col-md-12">
+
+						<center><h3>
+							<font color="white">輸出顯示</font>
+						</h3></center>
+						<center><input id="sendCmd" name="sendCmd" type="text" size="60" maxlength="50" required/></center>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<input id="temperature" name="temperature" value="<%= temperature%>" type="hidden" >
+		<input id="humidity" name="humidity" value="<%= humidity%>" type="hidden" >
+
+
+		<div id="status"></div>
+
+	</div><!--/.col-->
+
+
+<%- include page/footer %>

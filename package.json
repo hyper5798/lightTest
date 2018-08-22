@@ -1,0 +1,31 @@
+{
+  "name": "dlControl",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "bson": "~0.4.23",
+    "connect-flash": "0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "express-session": "~1.9.1",
+    "firmata": "^0.14.1",
+    "moment": "*",
+    "morgan": "~1.7.0",
+    "mosquito": "0.0.0",
+    "mqtt": "^1.11.2",
+    "node-red": "^0.15.2",
+    "node-red-contrib-mqtt-broker": "^0.2.4",
+    "node-red-contrib-serialport-rs485": "0.0.6",
+    "node-red-dashboard": "^2.9.4",
+    "node-schedule": "^1.1.1",
+    "serve-favicon": "~2.3.0",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^1.4.8"
+  }
+}
